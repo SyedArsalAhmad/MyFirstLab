@@ -1,15 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Voting Options</title>
+  <title>Dropdown Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 300px;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
   <h1>Choose a contestant:</h1>
   <form id="myForm" action="/api/post" method="POST">
     <select name="selectedOption">
-      <option value="JOHN">Food</option>
-      <option value="ALEXA">Activity</option>
-      <option value="ALI">Both</option>
+      <option value="" disabled selected>Select an option</option>
+      <option value="John">John</option>
+      <option value="Alexa">Alexa</option>
+      <option value="Ali">Ali</option>
     </select>
     <input type="submit" value="Submit">
   </form>
