@@ -13,8 +13,7 @@ app.get('/', (req, res) => {
 // Handle the POST request from the frontend
 app.post('/api/post', (req, res) => {
   const selectedOption = req.body.selectedOption;
-  apiUrl = ' https://j5kg91zuhj.execute-api.us-east-1.amazonaws.com/haha/?message='; // Replace with your API Gateway endpoint
-  apiUrl = ' https://j5kg91zuhj.execute-api.us-east-1.amazonaws.com/haha/?message=' + selectedOption;
+  apiUrl = '<InvokeURL>' + selectedOption;
   console.log(apiUrl);
 
   axios
