@@ -21,7 +21,7 @@ app.post('/api/post', (req, res) => {
       params: { selectedOption: selectedOption },
     })
     .then((response) => {
-      res.send(`Posted to API Gateway with selected optionim: ${selectedOption}`);
+      res.send(`Vote posted to API Gateway with selected option: ${selectedOption}`);
     })
     .catch((error) => {
       console.error('Error:', error);
