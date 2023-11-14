@@ -16,8 +16,7 @@ let count = 0;
 app.post('/api/post', (req, res) => {
   const selectedOption = req.body.selectedOption;
   count++;
-  apiUrl = '<InvokeURL>?message=' + selectedOption;
-  apiUrl = apiUrl + '&count=testingapi' + count;
+  apiUrl = '<InvokeURL>/?message=' + selectedOption;
   console.log(apiUrl);
 
   axios
