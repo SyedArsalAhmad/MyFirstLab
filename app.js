@@ -10,12 +10,9 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
-let count = 0;
-
 // Handle the POST request from the frontend
 app.post('/api/post', (req, res) => {
   const selectedOption = req.body.selectedOption;
-  count++;
   apiUrl = '<InvokeURL>/?message=' + selectedOption;
   console.log(apiUrl);
 
