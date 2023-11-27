@@ -1,6 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const app = express();
+const fs = require('fs');
 const port = 3000;
 
 app.use(express.static('public'));
@@ -24,7 +25,10 @@ app.post('', (req, res) => {
       params: { selectedOption: selectedOption },
     })
     .then((response) => {
-      res.send(`Vote posted to API Gateway with selected option: ${selectedOption}`);
+      const indexContent = fs.readFileSync("./public/index.html", 'utf8');
+
+      // Send the HTML content as the response
+      res.send(indexContent);
     })
     .catch((error) => {
       console.error('Error:', error);
