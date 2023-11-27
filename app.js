@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 });
 
 // Handle the POST request from the frontend
-app.post('/api/post', (req, res) => {
+app.post('', (req, res) => {
   const selectedOption = req.body.selectedOption;
   apiUrl = '<InvokeURL>/?message=' + selectedOption;
   console.log(apiUrl);
