@@ -71,9 +71,10 @@
           console.log(data);
           // Add any additional logic if needed
           // Update the values in the boxes
-          document.getElementById('aliCount').innerText = data;
-          document.getElementById('johnCount').innerText = data;
-          document.getElementById('alexaCount').innerText = data;
+          var parsedData = JSON.parse(data);
+          document.getElementById('aliCount').innerText = parsedData.val;
+          document.getElementById('johnCount').innerText = parsedData.val1;
+          document.getElementById('alexaCount').innerText = parsedData.val2;
         })
         .catch(error => {
           console.error('Error:', error);
