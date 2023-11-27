@@ -70,6 +70,10 @@
         .then(data => {
           console.log(data);
           // Add any additional logic if needed
+          // Update the values in the boxes
+          document.getElementById('aliCount').innerText = data;
+          document.getElementById('johnCount').innerText = data;
+          document.getElementById('alexaCount').innerText = data;
         })
         .catch(error => {
           console.error('Error:', error);
