@@ -33,12 +33,12 @@ app.post('', (req, res) => {
 // Handle the GET request when the refresh button is clicked
 app.get('/refresh', (req, res) => {
   // Replace '<RefreshInvokeURL>' with the actual URL you want to invoke
-  const refreshApiUrl = 'https://27r0at5156.execute-api.us-east-1.amazonaws.com/v1';
+  const refreshApiUrl = 'https://bd9x1naw0g.execute-api.us-east-1.amazonaws.com/v1';
   axios
     .get(refreshApiUrl)
     .then((response) => {
       console.log(response.data)
-      res.send(`Refresh request sent to: ${refreshApiUrl}`);
+      res.send(`${response.data}`);
     })
     .catch((error) => {
       console.error('Error:', error);
