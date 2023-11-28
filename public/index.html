@@ -78,12 +78,13 @@
           console.error('Error:', error);
         });
     }
+    refreshCounts();
   </script>
 </head>
 <body>
   <div class="container">
     <h1>Choose a contestant:</h1>
-    <form id="myForm" action="" method="POST" onsubmit="event.preventDefault(); setTimeout(refreshCounts, 2000);">
+    <form id="myForm" action="" method="POST">
       <select name="selectedOption" id="selectedOption">
         <option value="" disabled selected>Select an option</option>
         <option value="John">John</option>
