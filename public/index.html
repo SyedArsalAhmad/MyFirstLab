@@ -59,7 +59,6 @@
   </style>
   <script>
     function refreshCounts() {
-      // Notify app.js when the refresh button is clicked
       fetch('/refresh', { method: 'GET' })
         .then(response => {
           if (!response.ok) {
@@ -69,8 +68,7 @@
         })
         .then(data => {
           console.log(data);
-          // Add any additional logic if needed
-          // Update the values in the boxes
+          
           var parsedData = JSON.parse(data);
           document.getElementById('aliCount').innerText = parsedData.val;
           document.getElementById('johnCount').innerText = parsedData.val1;
@@ -85,7 +83,7 @@
 <body>
   <div class="container">
     <h1>Choose a contestant:</h1>
-    <form id="myForm" action="" method="POST">
+    <form id="myForm" action="" method="POST" onsubmit="event.preventDefault(); setTimeout(refreshCounts, 2000);">
       <select name="selectedOption" id="selectedOption">
         <option value="" disabled selected>Select an option</option>
         <option value="John">John</option>
