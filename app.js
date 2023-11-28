@@ -10,7 +10,6 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
-//https://bd9x1naw0g.execute-api.us-east-1.amazonaws.com/v1
 restapi = '<restapiId>';
 invokeurl = 'https://' + restapi + '.execute-api.us-east-1.amazonaws.com/';
 // Handle the POST request from the frontend
@@ -38,8 +37,7 @@ app.post('', (req, res) => {
 
 // Handle the GET request when the refresh button is clicked
 app.get('/refresh', (req, res) => {
-  // Replace '<RefreshInvokeURL>' with the actual URL you want to invoke
-  //refreshApiUrl = invokeurl + 'John'; //John
+  
   let output1, output2, output3;
 
   // Request for John
